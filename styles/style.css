@@ -1,0 +1,157 @@
+:root {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #1b1d21;
+
+    
+    --background-color: #780D73;
+    --gray-color: #6B6B6B;
+    --darkgray-color: #444;
+    --golden-hover: #dc9a0e;
+    --gray-border: rgb(212, 212, 212);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5 ,h6 {  
+    font-family: 'Amatic SC', cursive;
+    text-transform: uppercase;
+}
+
+span {
+    
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    z-index: 5;
+}
+
+header img {
+    width: 100px;
+}
+
+header ul li{
+    float: left;
+    margin: 5px 10px;
+}
+
+.main-banner {
+    position: relative;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-banner > div {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.responsive-margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.background-title {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+.section .section-icon {
+    width: 60px;
+    margin: auto;
+}
+
+span.section-span {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .125rem;
+    color: var(--gray-color);
+}
+
+.product-slider {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;  
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--gray-border);
+    padding: 15px;
+    margin: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-card p {
+    font-weight: 700;
+    color: var(--darkgray-color);
+    margin: 5px;
+}
+
+.product-card .price {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--background-color);
+}
+
+.product-card-button {
+    text-transform: uppercase;
+    padding: 7px 10px;
+    font-weight: 700;
+    border-radius: 20px;
+    margin: 5px;
+    background-color: transparent;
+    border: 1px solid var(--gray-border);
+}
+
+footer {
+    background-color: var(--background-color);
+    color: white;
+}
+
+
+
+
