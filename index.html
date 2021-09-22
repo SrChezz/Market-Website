@@ -7,31 +7,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&family=Nunito+Sans:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/logo-favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
+
+    <script src="https://kit.fontawesome.com/81478abc59.js" crossorigin="anonymous"></script>
+    
     <title>Plaza del Campo</title>
 </head>
 <body>
     <header>
-        <a href="">
-            <img src="images/logo.jpg" alt="">
-        </a>
+        <div class="first-part">
+            <a href="" class="main-logo">
+                <img src="images/logo.png" alt="">
+            </a>
+
+
+            <div id="toggle-navbar" class="toogle-navbar">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+
+       
 
         <nav>
             <ul>
-                <li><a href="">Fruver</a></li>
-                <li><a href="">Abarrotes</a></li>
-                <li><a href="">Combos</a></li>
-                <li><a href="">Paquetes</a></li>
-                <li><a href="">Lista de Precios</a></li>
-                <li><a href="">search</a></li>
-                <li><a href="">cart</a></li>
-                <li><a href="">WhatsApp</a></li>
+                <li>
+                    <a href="#">Fruver <i class="arrow fas fa-caret-down"></i></a>
+                    <ul class="extra-menu">
+                        <li><a href="">Frutas</a></li>
+                        <li><a href="">Verduras</a></li>
+                        <li><a href="">Hortalizas</a></li>
+                        <li><a href="">Tuberculos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Abarrotes <i class="arrow fas fa-caret-down"></i></a>
+                    <ul class="extra-menu">
+                        <li><a href="">Huevos</a></li>
+                        <li><a href="">Verduras</a></li>
+                        <li><a href="">Granos y Pastas</a></li>
+                        <li><a href="">Galletas y Harinas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Combos <i class="arrow fas fa-caret-down"></i></a></li>
+                <li><a href="#">Paquetes</a></li>
+                <li><a href="#">Lista de Precios</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="fas fa-search" ></a></li>
+                <li><a href="#" class="fas fa-shopping-cart"></a></li>
+                <li><a href="#" class="fab fa-whatsapp" > </a></li>
             </ul>
         </nav>
     </header>
 
     <section class="main-banner" style="background-image: url('images/background-main.jpg');">
-        <div>
+        <div class="text">
             <h1 class="main-title">Mercado a Domicilio</h1>
             <p>Sabemos que tu familia 👪 merece disfrutar frutas y verduras frescas y de calidad 🍓🍅🍆🍇 realiza tu pedido desde la comodidad de tu hogar y a tu gusto.</p>
             
@@ -42,8 +76,14 @@
                 <a class="simple-button-negative" href="#">Ver Combos</a>
             </div>
             
-        </div>    
+        </div> 
+        
     </section>
+
+    <div class="extra-text">
+        <p>Prepara tu pedido desde nuestra lista de compras. ¡Solo debes hacer click y empezar! 👉</p> 
+        <a class="simple-button" href="">Lista de Compras</a>
+    </div>   
 
     <section class="section responsive-margin">
         <figure class="section-icon">
@@ -90,7 +130,7 @@
 
     </section>
         
-    <section class="section responsive-margin">
+    <section class="section">
         <figure class="section-icon">
             <img src="images/section-icon.png" alt="" srcset="">
         </figure>
@@ -178,6 +218,28 @@
         </div>
     </section>
 
+    <section class="section">
+
+        <div class="values-container">
+
+            <a style="background-image: url('images/background-content.png');" class="background-image background-darkened">
+                <h2 class="section-title white">Sembramos con amor</h2>               
+            </a>
+            <a style="background-image: url('images/background-content.png');" class="background-image background-darkened">
+                <h2 class="section-title white">Sembramos con amor</h2>               
+            </a>
+            <a style="background-image: url('images/background-content.png');" class="background-image background-darkened">
+                <h2 class="section-title white">Sembramos con amor</h2>               
+            </a>
+            <a style="background-image: url('images/background-content.png');" class="background-image background-darkened">
+                <h2 class="section-title white">Sembramos con amor</h2>               
+            </a>
+
+
+        </div>   
+
+    </section>
+
     <footer>
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
@@ -192,22 +254,88 @@
                 <path class="elementor-shape-fill" d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4	C19.9,13.7,15.7,13.3,15.6,13.2z"></path>
             </svg>
         </div>
-        <div>
+
+        <div class="footer-features responsive-margin">
             <div>
-                <img src="images/footer-icon-1.png" alt="">
+                <figure>
+                    <img src="images/footer-icon-1.png" alt="">
+                </figure>
                 <div>
                     <h3>Chat Online</h3>
-                    <p> Ofrecemos soporte en tus compras</p>
+                    <p> Ofrecemos soporte en tus compras.</p>
+                </div>
+            </div>
+
+            <div>
+                <figure>
+                    <img src="images/footer-icon-1.png" alt="">
+                </figure>
+                <div>
+                    <h3>Compras en Linea</h3>
+                    <p> Pide tu pedido tambien en WhatsApp.</p>
+                </div>
+            </div>
+
+            <div>
+                <figure>
+                    <img src="images/footer-icon-1.png" alt="">
+                </figure>
+                
+                <div>
+                    <h3>Entregas de Pedidos</h3>
+                    <p>Realizamos entregas los Lunes y Jueves!</p>
+                </div>
+            </div>
+
+            <div>
+                <figure>
+                    <img src="images/footer-icon-1.png" alt="">
+                </figure>
+                <div>
+                    <h3 class="">Compra Membresia</h3>
+                    <p>Ten descuentos en productos seleccionados.</p>
                 </div>
             </div>
             
         </div>
-        <div>
+
+        <div class="lists responsive-margin">
+            <div>
+                <h4>Productos:</h4>
+                <ul>
+                    <li><a href="#">Frutas</a></li>
+                    <li><a href="#">Verduras</a></li>
+                    <li><a href="#">Hortalizas</a></li>
+                    <li><a href="#">Tuberculos</a></li>
+                    <li><a href="#">Huevos</a></li>
+                    <li><a href="#">Combos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Plaza del Campo</h4>
+
+                <p>Somos un Startup, creado para llevar a todos los hogares, productos de gran calidad. Sabemos que la alimentación enriquece cada hogar con un alimento fresco desde la sabana.</p>
+
+                <p>¡Del campo directo a tu casa!</p>
+            </div>
+               
+            <div class="contact">
+                <h4>Linea de Atencion: </h4>
+                <a href="">+51 958121212</a>
+
+                <h4>Atencion al Cliente</h4>
+                <a href="">soporte@plazadelcampo.pe</a>
+
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-youtube-square fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
             <p>Copyright 2021 © Plaza del campo. Todos los derechos reservados.</p>
-            
-            <ul>
-                <li><a href="">facebook</a></li>
-            </ul>
         </div>
     </footer>
 
