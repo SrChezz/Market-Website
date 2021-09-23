@@ -53,6 +53,14 @@ button {
     color: white;
 }
 
+.simple-link {
+    transition: .4s ease;
+}
+
+.simple-link:hover {
+    color: #81d742;
+}
+
 .simple-button {
     padding: 15px 30px;
     color: white;
@@ -88,12 +96,21 @@ header {
     z-index: 5;
 }
 
-header .main-logo, header .first-part {
+header .main-logo {
+    display: block;
     width: 100px;
 }
 
 header .toogle-navbar {
-    display: none;
+    cursor: pointer;
+}
+
+header .toogle-navbar > div {
+    width: 30px;
+    height: 5px;
+    background-color: #1b1d21;
+    margin-bottom: 4px;
+    border-radius: 2px;
 }
 
 header nav {
@@ -114,7 +131,6 @@ header > nav > ul > li{
 
 header .extra-menu {
     /* max-height: 0px; */
-    transform: scaleY(0);
     transform-origin: top;
     overflow: hidden;
     display: flex;
@@ -130,11 +146,6 @@ header .extra-menu {
     font-size: .7rem;
     border-radius: 4px;
     transition: .4s ease;
-}
-
-header li:hover > .extra-menu { 
-    /* max-height: 300px; */
-    transform: scaleY(1);
 }
 
 header .extra-menu a {
@@ -169,6 +180,68 @@ header > nav > ul > li > a:hover {
 
 header .icons {
     font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 750px) {
+    header .toogle-navbar {
+        display: none;
+    }
+
+    header .extra-menu {  
+        transform: scaleY(0);
+    }
+
+    header li:hover > .extra-menu { 
+        /* max-height: 300px; */
+        transform: scaleY(1);
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    header {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+    }
+
+    header > .first-part {
+        width: 100%;
+        display: flex;      
+        justify-content: space-between;
+        align-items: center;
+        /* border: 1px solid black; */
+        padding: 10px;
+    }
+
+    header nav {
+        width: 90%;
+        margin: auto;
+        flex-direction: column;     
+    }
+
+
+
+    header nav > ul {
+        padding: 0px;
+    }
+
+    header nav > .navigation-links > li {
+        width: 100%;
+    }
+
+    header nav > .navigation-links > li > a {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .extra-menu {
+        position: static;
+    }
+    
 }
 
 .main-banner {
@@ -476,6 +549,8 @@ footer .copyright {
     padding: 5px;
     
 }
+
+
 
 
 
