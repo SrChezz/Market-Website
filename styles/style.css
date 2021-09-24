@@ -127,6 +127,7 @@ header > nav > ul > li{
     padding: 10px 0px;
     font-size: .8rem;
     position: relative;
+    overflow: hidden;
 }
 
 header .extra-menu {
@@ -160,6 +161,7 @@ header .extra-menu a:hover {
 header .extra-menu li {
     padding: 7px 12px;  
     margin: 0px;
+    box-sizing: border-box;
 }
 
 header .arrow {
@@ -182,68 +184,6 @@ header .icons {
     font-size: 1.4rem;
 }
 
-@media only screen and (min-width: 750px) {
-    header .toogle-navbar {
-        display: none;
-    }
-
-    header .extra-menu {  
-        transform: scaleY(0);
-    }
-
-    header li:hover > .extra-menu { 
-        /* max-height: 300px; */
-        transform: scaleY(1);
-    }
-}
-
-@media only screen and (max-width: 750px) {
-
-    header {
-        position: relative;
-        flex-direction: column;
-        width: 100%;
-        background-color: white;
-    }
-
-    header > .first-part {
-        width: 100%;
-        display: flex;      
-        justify-content: space-between;
-        align-items: center;
-        /* border: 1px solid black; */
-        padding: 10px;
-    }
-
-    header nav {
-        width: 90%;
-        margin: auto;
-        flex-direction: column;     
-    }
-
-
-
-    header nav > ul {
-        padding: 0px;
-    }
-
-    header nav > .navigation-links > li {
-        width: 100%;
-    }
-
-    header nav > .navigation-links > li > a {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header .extra-menu {
-        position: static;
-    }
-    
-}
-
 .main-banner {
     padding-top: 60px;
     position: relative;
@@ -260,17 +200,18 @@ header .icons {
 }
 
 .main-banner > .text {
-    text-align: left;
+    /* text-align: left; */
     width: 350px;
     position: absolute;
     top: 45%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+    left: 10%;
+    transform: translateY(-50%);
 }
 
 .main-banner > .text > div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .responsive-margin {
@@ -279,6 +220,8 @@ header .icons {
 }
 
 .section {
+    box-sizing: border-box;
+    width: 100%;
     margin-top: 50px;
     padding-top: 40px;
     padding-bottom: 70px;
@@ -290,6 +233,7 @@ header .icons {
     padding: 5px;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: var(--background-color);
     color: white;
@@ -403,7 +347,6 @@ span.section-span {
 }
 
 .category-card {
-    font-size: 1.1;
     text-transform: uppercase;
     font-weight: 400;
     height: auto;
@@ -463,9 +406,10 @@ span.section-span {
 }
 
 .values-container > a {
+    display: block;
     position: relative;
     width: 25%;
-    height: 50vh;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -526,9 +470,9 @@ footer .lists {
     text-align: left;
 }
 
-footer .lists > * {
+/* footer .lists > * {
     margin: 40px;
-}
+} */
 
 footer ul{
     padding-left: 5px;
@@ -550,7 +494,196 @@ footer .copyright {
     
 }
 
+@media only screen and (max-width: 1080px) {
 
+    .medium-toggle {
+        display: none;
+    }
+
+    .product-slider {
+
+    }
+    /* CATEGORY */ 
+
+    .category-container {
+        padding-left: 15%;
+        padding-right: 15%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .category-card {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+
+    /* COMOBOS */
+
+    .combo-container {
+        
+        padding-left: 15%;
+        padding-right: 15%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .combo-card {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+
+    .combo-card h3 {
+        margin: 0px;
+    }
+
+
+    /* VALUES */
+
+    .values-container {
+        padding-left: 20%;
+        padding-right: 20%;
+        flex-wrap: wrap;
+    }
+    
+    .values-container > a {
+        width: 50%;
+    }
+
+    .footer-features {
+        padding-left: 20%;
+        padding-right: 20%;
+        flex-wrap: wrap;
+    }
+
+    .footer-features > div {
+        flex-direction: column;
+        width: 45%;
+    }
+
+    .footer-features > div img {
+        width: 60%;
+    }
+
+}
+
+@media only screen and (min-width: 750px) {
+    header .toogle-navbar {
+        display: none;
+    }
+
+    header .extra-menu {  
+        transform: scaleY(0);
+    }
+
+    header li:hover > .extra-menu { 
+        /* max-height: 300px; */
+        transform: scaleY(1);
+    }
+
+    .main-banner > .text {
+        text-align: left;
+    }
+
+    footer .lists > * {
+        margin: 40px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .small-toggle {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+    }
+
+    header > .first-part {
+        width: 100%;
+        display: flex;      
+        justify-content: space-between;
+        align-items: center;
+        /* border: 1px solid black; */
+        padding: 10px;
+    }
+
+    header nav {
+        width: 90%;
+        margin: auto;
+        flex-direction: column;     
+    }
+
+    header nav > ul {
+        padding: 0px;
+    }
+
+    header nav > .navigation-links > li {
+        width: 100%;
+    }
+
+    header nav > .navigation-links > li > a {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .extra-menu {
+        position: static;
+    }
+
+    .main-banner > .text {
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-banner > .text > div {
+        flex-direction: column;
+    }
+
+    .main-banner > .text > div > * {
+        margin: 10px;
+    }
+
+    .product-slider {
+        margin: auto;
+        flex-direction: column;   
+        align-items: center;  
+    }
+
+    .category-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .combo-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .values-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer-features {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    /* VALUES */
+
+
+    footer .lists {
+        flex-direction: column;
+    }
+}
 
 
 
