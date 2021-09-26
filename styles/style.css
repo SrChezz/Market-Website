@@ -127,7 +127,7 @@ header > nav > ul > li{
     padding: 10px 0px;
     font-size: .8rem;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 header .extra-menu {
@@ -154,7 +154,6 @@ header .extra-menu a {
 }
 
 header .extra-menu a:hover {
-    content: "test";
     color: var(--background-color);
 }
 
@@ -170,6 +169,7 @@ header .arrow {
 }
 
 header > nav >  ul > li > a {
+    display: inline-block;
     padding: 10px 15px;
     transition: .4s ease;
     border-bottom: 3px solid transparent;
